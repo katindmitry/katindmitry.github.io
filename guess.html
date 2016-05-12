@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт Дмитрия Катина</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+	
+function play() {
+	var answer = parseInt(Math.random() * 100) + 1;
+	var i = 0;
+	var attempt = 1;
+	while(true){
+	var userAnswer = prompt('Игра Угадайка. Я загадал число от 1 до 100. Попробуйте угадать его:');	
+	if(userAnswer == 'q')
+		break;
+
+	userAnswer = parseInt(userAnswer);
+
+		if(userAnswer >= 1 && userAnswer <= 100) {
+		if(answer == userAnswer){
+			alert('Поздравляю! Вы угадали!!!');
+			break;
+			}
+		else if(answer > userAnswer) {
+			alert('Не угадал! Твое число слишком маленькое!');
+			}
+		else {
+			alert('Не угадал! Твое число слишком большое!');
+		} 
+		
+	} else alert('Число не подходит. Введите число от 1 до 100.');
+	++i;
+	++attempt;
+}
+	alert('Игра закончена! Вы угадали число за ' + attempt + ' попыток :-)');
+
+}
+</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="playground.html">Песочница</a>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Угадайка</h2>
+	</div>
+	<div id="content">
+		
+		<h3>Угадай число!</h3>  
+
+				
+		</br></br></br>
+		
+		<p>Я загадал число от 1 до 100. Попробуйте угадать его: <p/>
+		<input type="button" value="Играть" onClick="play()"/>
+
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+
+
+
+
+
+</body>
+</html>
